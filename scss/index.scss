@@ -51,7 +51,7 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 3em;
 }
 
 .hidden {
@@ -158,6 +158,32 @@ main {
     }
     p {
       font-weight: 200;
+    }
+  }
+}
+
+.most-searched {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  font-family: $font;
+  article {
+    display: flex;
+    gap: 1em;
+    img {
+      height: 8em;
+      width: 6em;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      h2 {
+        color: $grayish-blue;
+      }
+      h1 {
+        font-weight: 800;
+      }
     }
   }
 }
