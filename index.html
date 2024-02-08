@@ -14,10 +14,10 @@
   </head>
   <body>
     <header>
-      <nav>
-        <span>
-          <a class="logo" href="#"> W. </a>
-        </span>
+      <span>
+        <a class="logo" href="#"> W. </a>
+      </span>
+      <nav class="desktop-menu">
         <ul>
           <li>Home</li>
           <li>New</li>
@@ -26,13 +26,28 @@
           <li>Categories</li>
         </ul>
       </nav>
+      <button class="menu-button" id="open-menu">
+        <img src="assets/images/icon-menu.svg" alt="menu button" />
+      </button>
     </header>
+    <nav class="hidden" id="mobile-menu">
+      <ul>
+        <li>Home</li>
+        <li>New</li>
+        <li>Popular</li>
+        <li>Trending</li>
+        <li>Categories</li>
+      </ul>
+      <button class="menu-button" id="close-menu">
+        <img src="assets/images/icon-menu-close.svg" alt="close button" />
+      </button>
+    </nav>
 
     <main>
       <section class="news-of-the-day">
         <article>
           <img
-            src="./assets/images/image-web-3-desktop.jpg"
+            src="./assets/images/image-web-3-mobile.jpg"
             alt="imagem colorida" />
           <h1>The Bright Futere of Web 3.0?</h1>
           <p>
@@ -40,7 +55,7 @@
             power of the platforms back into the hands of the people. But is it
             really fulfilling its promise?
           </p>
-          <button>READE MORE</button>
+          <button>READ MORE</button>
         </article>
       </section>
 
@@ -117,5 +132,6 @@
         >Miguel Cardoso</a
       >.
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>

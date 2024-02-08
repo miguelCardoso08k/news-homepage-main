@@ -1,3 +1,23 @@
+@import "./utils.scss";
+
+@keyframes open-menu-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes close-menu-animation {
+  from {
+    width: 70%;
+  }
+  to {
+    width: 0;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,12 +30,121 @@ body {
 }
 
 body {
-  background-color: hsl(36, 100%, 99%);
+  overflow-x: hidden;
+  background-color: $off-white;
+  color: $very-dark-blue;
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  gap: 2.5em;
+  padding: 2em;
+  position: relative;
 }
+
+header {
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.hidden {
+  display: none;
+}
+
+.mobile-menu {
+  animation-name: open-menu-animation;
+  animation-duration: 1s;
+  background-color: $off-white;
+  height: 100vh;
+  width: 70%;
+  padding-left: 2em;
+  padding-top: 7em;
+  display: flex;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 1em;
+    font-family: $font;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+}
+
+.desktop-menu {
+  display: none;
+}
+
+.logo {
+  color: $very-dark-blue;
+  font-size: 3em;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.menu-button {
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+
+.news-of-the-day {
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-family: $font;
+    img {
+      height: 20em;
+      width: 20em;
+    }
+    h1 {
+      font-size: 2.3em;
+      font-weight: 900;
+    }
+    p {
+      color: $dark-grayish-blue;
+    }
+    button {
+      background-color: $soft-red;
+      border: none;
+      color: $off-white;
+      padding-block: 1.2em;
+      width: 12em;
+      font-weight: 600;
+      letter-spacing: 3px;
+    }
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
   a {
     color: hsl(228, 45%, 44%);
   }
+}
+
+#open-menu {
+  display: block;
+}
+
+#close-menu {
+  display: block;
+  position: absolute;
+  top: 2em;
+  right: 2em;
 }

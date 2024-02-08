@@ -1,3 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@keyframes open-menu-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes close-menu-animation {
+  from {
+    width: 70%;
+  }
+  to {
+    width: 0;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +28,102 @@ body {
 }
 
 body {
-  background-color: hsl(36, 100%, 99%);
+  overflow-x: hidden;
+  background-color: #fffdfa;
+  color: #00001a;
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  gap: 2.5em;
+  padding: 2em;
+  position: relative;
+}
+
+header {
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.hidden {
+  display: none;
+}
+
+.mobile-menu {
+  animation-name: open-menu-animation;
+  animation-duration: 1s;
+  background-color: #fffdfa;
+  height: 100vh;
+  width: 70%;
+  padding-left: 2em;
+  padding-top: 7em;
+  display: flex;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 1em;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.desktop-menu {
+  display: none;
+}
+
+.logo {
+  color: #00001a;
+  font-size: 3em;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.menu-button {
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+
+.news-of-the-day article {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-family: "Inter", sans-serif;
+}
+.news-of-the-day article img {
+  height: 20em;
+  width: 20em;
+}
+.news-of-the-day article h1 {
+  font-size: 2.3em;
+  font-weight: 900;
+}
+.news-of-the-day article p {
+  color: #5d5f79;
+}
+.news-of-the-day article button {
+  background-color: #f15e50;
+  border: none;
+  color: #fffdfa;
+  padding-block: 1.2em;
+  width: 12em;
+  font-weight: 600;
+  letter-spacing: 3px;
 }
 
 .attribution {
@@ -20,6 +132,17 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+#open-menu {
+  display: block;
+}
+
+#close-menu {
+  display: block;
+  position: absolute;
+  top: 2em;
+  right: 2em;
 }
 
 /*# sourceMappingURL=style.css.map */
