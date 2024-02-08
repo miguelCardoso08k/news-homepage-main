@@ -37,7 +37,7 @@ body {
   flex-direction: column;
   font-size: 1em;
   gap: 2.5em;
-  padding: 2em;
+  padding: 2em 1em;
   position: relative;
 }
 
@@ -109,7 +109,7 @@ main {
     font-family: $font;
     img {
       height: 20em;
-      width: 20em;
+      width: 100%;
     }
     h1 {
       font-size: 2.3em;
@@ -126,6 +126,38 @@ main {
       width: 12em;
       font-weight: 600;
       letter-spacing: 3px;
+    }
+  }
+}
+
+.news {
+  background-color: $very-dark-blue;
+  color: $grayish-blue;
+  font-family: $font;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1.5em;
+  h1 {
+    color: $soft-orange;
+    font-size: 2em;
+  }
+  hr {
+    height: 1px;
+    border: none;
+    background-color: $dark-grayish-blue;
+    color: $dark-grayish-blue;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    h2 {
+      color: $off-white;
+      font-size: 1.2em;
+    }
+    p {
+      font-weight: 200;
     }
   }
 }

@@ -35,7 +35,7 @@ body {
   flex-direction: column;
   font-size: 1em;
   gap: 2.5em;
-  padding: 2em;
+  padding: 2em 1em;
   position: relative;
 }
 
@@ -107,7 +107,7 @@ main {
 }
 .news-of-the-day article img {
   height: 20em;
-  width: 20em;
+  width: 100%;
 }
 .news-of-the-day article h1 {
   font-size: 2.3em;
@@ -124,6 +124,38 @@ main {
   width: 12em;
   font-weight: 600;
   letter-spacing: 3px;
+}
+
+.news {
+  background-color: #00001a;
+  color: #c5c6ce;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1.5em;
+}
+.news h1 {
+  color: #e9ab53;
+  font-size: 2em;
+}
+.news hr {
+  height: 1px;
+  border: none;
+  background-color: #5d5f79;
+  color: #5d5f79;
+}
+.news article {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.news article h2 {
+  color: #fffdfa;
+  font-size: 1.2em;
+}
+.news article p {
+  font-weight: 200;
 }
 
 .attribution {
