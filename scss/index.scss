@@ -38,7 +38,9 @@ body {
   font-size: 1em;
   gap: 2.5em;
   padding: 2em 1em;
-  position: relative;
+  @media (min-width: $laptop) {
+    padding: 2em;
+  }
 }
 
 header {
@@ -52,6 +54,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 3em;
+  @media (min-width: $laptop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .hidden {
@@ -81,11 +87,37 @@ main {
     font-family: $font;
     font-size: 1.2em;
     font-weight: 600;
+
+    a {
+      text-decoration: none;
+      color: $very-dark-blue;
+      :hover {
+        color: $soft-red;
+      }
+    }
   }
 }
 
 .desktop-menu {
   display: none;
+  @media (min-width: $tablet) {
+    display: flex;
+    ul {
+      list-style: none;
+      font-family: $font;
+      display: flex;
+      gap: 1em;
+      li {
+        a {
+          text-decoration: none;
+          color: $dark-grayish-blue;
+        }
+        :hover {
+          color: $soft-red;
+        }
+      }
+    }
+  }
 }
 
 .logo {
@@ -118,15 +150,48 @@ main {
     p {
       color: $dark-grayish-blue;
     }
-    button {
-      background-color: $soft-red;
-      border: none;
-      color: $off-white;
-      padding-block: 1.2em;
+
+    a {
+      height: 3.5em;
       width: 12em;
-      font-weight: 600;
-      letter-spacing: 3px;
+
+      button {
+        background-color: $soft-red;
+        border: none;
+        color: $off-white;
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+        font-weight: 600;
+        letter-spacing: 3px;
+      }
+      :hover {
+        background-color: $very-dark-blue;
+      }
     }
+    @media (min-width: $laptop) {
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+
+      picture {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        img {
+          height: 100%;
+        }
+      }
+      h1 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+        font-size: 3em;
+      }
+    }
+  }
+  @media (min-width: $laptop) {
+    grid-column: 1/3;
   }
 }
 
@@ -152,9 +217,13 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    h2 {
+    a {
+      text-decoration: none;
       color: $off-white;
       font-size: 1.2em;
+      :hover {
+        color: $soft-orange;
+      }
     }
     p {
       font-weight: 200;
@@ -181,8 +250,31 @@ main {
       h2 {
         color: $grayish-blue;
       }
-      h1 {
+      a {
+        text-decoration: none;
+        color: $very-dark-blue;
         font-weight: 800;
+        :hover {
+          color: $soft-red;
+        }
+      }
+    }
+  }
+  @media (min-width: $laptop) {
+    grid-column: 1 / 4;
+    flex-direction: row;
+    article {
+      div {
+        gap: 0.5em;
+        h2 {
+          font-size: 1.5em;
+        }
+        a {
+          font-size: 1em;
+        }
+        p {
+          font-size: 0.7em;
+        }
       }
     }
   }
@@ -198,6 +290,9 @@ main {
 
 #open-menu {
   display: block;
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }
 
 #close-menu {

@@ -19,11 +19,11 @@
       </span>
       <nav class="desktop-menu">
         <ul>
-          <li>Home</li>
-          <li>New</li>
-          <li>Popular</li>
-          <li>Trending</li>
-          <li>Categories</li>
+          <li><a href="">Home</a></li>
+          <li><a href="">New</a></li>
+          <li><a href="">Popular</a></li>
+          <li><a href="">Trending</a></li>
+          <li><a href="">Categories</a></li>
         </ul>
       </nav>
       <button class="menu-button" id="open-menu">
@@ -32,11 +32,11 @@
     </header>
     <nav class="hidden" id="mobile-menu">
       <ul>
-        <li>Home</li>
-        <li>New</li>
-        <li>Popular</li>
-        <li>Trending</li>
-        <li>Categories</li>
+        <li><a href="">Home</a></li>
+        <li><a href="">New</a></li>
+        <li><a href="">Popular</a></li>
+        <li><a href="">Trending</a></li>
+        <li><a href="">Categories</a></li>
       </ul>
       <button class="menu-button" id="close-menu">
         <img src="assets/images/icon-menu-close.svg" alt="close button" />
@@ -46,28 +46,38 @@
     <main>
       <section class="news-of-the-day">
         <article>
-          <img
-            src="./assets/images/image-web-3-mobile.jpg"
-            alt="imagem colorida" />
+          <picture>
+            <source
+              media="(max-width: 680px)"
+              srcset="assets/images/image-web-3-mobile.jpg" />
+            <img
+              src="assets/images/image-web-3-desktop.jpg"
+              alt="imagem colorida" />
+          </picture>
+
           <h1>The Bright Futere of Web 3.0?</h1>
           <p>
             We dive into the next evolution of the web that claims to put the
             power of the platforms back into the hands of the people. But is it
             really fulfilling its promise?
           </p>
-          <button>READ MORE</button>
+          <a href=""><button>READ MORE</button></a>
         </article>
       </section>
 
       <section class="news">
         <h1>New</h1>
         <article>
-          <h2>Hydrogen VS Electric Cars</h2>
+          <a href="">
+            <h2>Hydrogen VS Electric Cars</h2>
+          </a>
           <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
         </article>
         <hr />
         <article>
-          <h2>The Downsides of AI Artistry</h2>
+          <a href="">
+            <h2>The Downsides of AI Artistry</h2>
+          </a>
           <p>
             What are the possible adverse3 effects of on-demand AI image
             genaration?
@@ -75,7 +85,9 @@
         </article>
         <hr />
         <article>
-          <h2>Is VC Funding Drying Up?</h2>
+          <a href="">
+            <h2>Is VC Funding Drying Up?</h2>
+          </a>
           <p>
             Private funding by VC firms is down 50% YOY. We take a look at what
             that means.
@@ -90,7 +102,9 @@
           </div>
           <div>
             <h2>01</h2>
-            <h1>Reviving Retro PCs</h1>
+            <a href="">
+              <h1>Reviving Retro PCs</h1>
+            </a>
             <p>What happens when old PCs are given modern upgrades?</p>
           </div>
         </article>
@@ -103,7 +117,9 @@
           </div>
           <div>
             <h2>02</h2>
-            <h1>Top 10 Laptops of 2022</h1>
+            <a href="">
+              <h1>Top 10 Laptops of 2022</h1>
+            </a>
             <p>Our best picks for various needs and budgets</p>
           </div>
         </article>
@@ -116,7 +132,9 @@
           </div>
           <div>
             <h2>03</h2>
-            <h1>The Growth of Gaming</h1>
+            <a href="">
+              <h1>The Growth of Gaming</h1>
+            </a>
             <p>How the pandemic has sparked fresh opportunities</p>
           </div>
         </article>
