@@ -42,6 +42,11 @@ body {
     padding: 2em;
   }
 }
+@media (min-width: 1440px) {
+  body {
+    padding: 4em;
+  }
+}
 
 header {
   height: 20px;
@@ -265,6 +270,7 @@ main {
   .most-searched {
     grid-column: 1/4;
     flex-direction: row;
+    gap: 3em;
   }
   .most-searched article div {
     gap: 0.5em;
